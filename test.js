@@ -69,7 +69,7 @@ success('YAY!!! You finished phase 2. Continue to phase 3. Almost done.');
 ////// TEST PHASE 3 /////////////////////////////////////////
 
 //test constructor with passengers
-console.log('Testing Constructor (with passsengers)');
+console.log('Testing Constructor (with passengers)');
 myCar = new Car('Acura', 'Integra', 1999, 'Red', 4);
 assert.deepEqual(myCar.passengers,[],"Passengers does not default to an empty array if left blank.");
 myCar = new Car('Acura', 'Integra', 1999, 'Red', 4, ['Anil','Sarah']);
