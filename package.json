@@ -1,0 +1,16 @@
+{
+  "name": "TEMPLATE-js",
+  "scripts": {
+    "lint:js": "node_modules/eslint/bin/eslint.js src; exit 0",
+    "test": "node spec/test.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}

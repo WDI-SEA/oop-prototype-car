@@ -4,7 +4,7 @@
 
 The idea of this lab is to get you comfortable with Object Oriented Programming (OOP) and introduce you to Test Driven Development (TDD) in JavaScript. By the end you should be comfortable working with objects and writing prototypes.
 
-All of the tests have been written for you, so all you need to do is run `test.js` to see if the Car passes the tests.
+All of the tests have been written for you, so all you need to do is run `npm test` to see if the Car passes the tests.
 
 ## Cars
 
