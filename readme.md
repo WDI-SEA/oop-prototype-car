@@ -1,14 +1,16 @@
 # Prototype Body Shop
 
-## Implement the following
-
 The idea of this lab is to get you comfortable with Object Oriented Programming (OOP) and introduce you to Test Driven Development (TDD) in JavaScript. By the end you should be comfortable working with objects and writing prototypes.
 
-All of the tests have been written for you, so all you need to do is run `npm test` to see if the Car passes the tests.
+All of the tests have been written for you, so all you'll need to do is run them.
 
-## Cars
+##Commands
+* `npm test` - run test suite
+* `npm run lint:js` - lint JS
 
-We need a prototype for a car. Can you help us with your sweet javascript skills?
+##Requirements
+
+We need a prototype for a car. Can you help us with your sweet JavaScript skills?
 
 ### Phase I
 
@@ -36,7 +38,7 @@ We should also be able to do the following with our car.
 * `Car.paint()`, which should take a new color (string) and update the color of the car to the new color.
 
 
-## Phase II
+### Phase II
 
 Implement and test the following methods:
 
@@ -46,7 +48,7 @@ Implement and test the following methods:
 * `Car.park()` only if the car is not running you should console.log `parked!!`.  Should return true if it is successful and false if it is not.
 
 
-## Phase III
+### Phase III
 
 Add the following property to the **constructor**:
 
@@ -62,3 +64,4 @@ Implement the following methods:
 
 
 **NOTE:** When deciding if there are enough seats available remember that the driver takes up 1 seat, but is NOT counted as a passenger in passengerCount(). You can assume the driver is the owner.
+
