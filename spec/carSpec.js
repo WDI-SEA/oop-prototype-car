@@ -1,9 +1,9 @@
 // load the assert plugin (for testing)
 var assert = require('assert');
+var success = require('./helpers/success');
 
 // load the Car class
-var Car = require('../src/Car.js');
-
+var Car = require('../src/Car');
 
 // //// TEST PHASE 1 /////////////////////////////////////////
 
@@ -119,16 +119,3 @@ assert.equal(typeof(myCar.passengerCount), 'function', 'there is no passengerCou
 assert.strictEqual(typeof(myCar.passengerCount()), 'number', 'passengerCount function did not return a number value');
 assert.strictEqual(myCar.passengerCount(), 3, 'Passenger count seems inaccurate. Expected 3.');
 success('Assignment complete. Congratulations!!\r\n\r\nWelcome to the wild world of OOP (Object Oriented Programming) and TDD (Test Driven Development).');
-
-
-// simple helper function to output success of tests (DRY)
-function success(extra) {
-  console.log('...success');
-  console.log(' ');
-  if (extra) {
-    console.log('-------------------------');
-    console.log(extra);
-    console.log('-------------------------');
-    console.log(' ');
-  }
-}
