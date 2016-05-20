@@ -4,7 +4,10 @@ The idea of this lab is to get you comfortable with Object Oriented Programming 
 
 All of the tests have been written for you, so all you'll need to do is run them.
 
-##Commands
+## Getting Started
+
+* Fork and clone this repository
+* Run `npm install` to install dependencies
 * `npm test` - run test suite
 * `npm run lint:js` - lint JS
 
@@ -25,8 +28,8 @@ Our car should have the following:
 * owner
 * previous_owners
 
-
 As a default a `new Car` should have the following values:
+
 * previous_owners should be an empty array, `[]`.
 * current_owner: should be `manufacturer`.
 * `running` should be false.
@@ -36,7 +39,6 @@ We should also be able to do the following with our car.
 *  `Car.sell()`, We should able to sell a car to someone, which should update the `owner` and `previous_owners` array. This takes 1 string parameter for the new owner's name. New owners should be `pushed` to the end of the array.
 
 * `Car.paint()`, which should take a new color (string) and update the color of the car to the new color.
-
 
 ### Phase II
 
@@ -62,6 +64,5 @@ Implement the following methods:
 * `Car.dropOff()` it should take a `name` and remove them from the `passengers` array, but only if they are in the array. It should also only drop them off if the car is `on`. It should also output `"driving to drop off <friend>"` and return true on success and false on failure.
 * `Car.passengerCount()` should return the number (integer) of passengers currently in the car.
 
-
-**NOTE:** When deciding if there are enough seats available remember that the driver takes up 1 seat, but is NOT counted as a passenger in passengerCount(). You can assume the driver is the owner.
+**NOTE:** When deciding if there are enough seats available, remember that the driver takes up 1 seat, but is NOT counted as a passenger in passengerCount(). You can assume the driver is the owner.
 
