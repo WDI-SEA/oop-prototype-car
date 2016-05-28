@@ -1,7 +1,7 @@
 {
   "name": "TEMPLATE-js",
   "scripts": {
-    "lint:js": "node_modules/eslint/bin/eslint.js src; exit 0",
+    "lint:js": "node_modules/eslint/bin/eslint.js src",
     "test": "node spec/index.js"
   },
   "author": "",
