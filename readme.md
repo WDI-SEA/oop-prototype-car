@@ -11,6 +11,16 @@ All of the tests have been written for you, so all you'll need to do is run them
 * `npm test` - run test suite
 * `npm run lint:js` - lint JS
 
+## Submission
+
+To submit, create a pull request as before. Additionally, your submission will be checked automatically using a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) service called Travis CI. Travis CI will do the following to check your code:
+
+* Run `npm install` on Travis's servers
+* Run `npm run lint:js` to check your code styling
+* Run `npm test` to check if your tests pass
+
+Make sure to **run these commands locally first** to verify your correctness. You can see the progress of the Travis CI check by going to your pull request, or looking at the [Travis CI build page for this repo](https://travis-ci.org/WDI-SEA/oop-prototype-car/pull_requests)
+
 ##Requirements
 
 We need a prototype for a car. Can you help us with your sweet JavaScript skills?
