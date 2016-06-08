@@ -1,8 +1,8 @@
 {
-  "name": "TEMPLATE-js",
+  "name": "oop-prototype-car",
   "scripts": {
     "lint:js": "node_modules/eslint/bin/eslint.js src",
-    "test": "node spec/index.js"
+    "test": "node test/index.js"
   },
   "author": "",
   "license": "MIT",
