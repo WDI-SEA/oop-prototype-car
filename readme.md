@@ -46,7 +46,7 @@ As a default a `new Car` should have the following values:
 
 We should also be able to do the following with our car.
 
-*  `Car.sell()`, We should able to sell a car to someone, which should update the `owner` and `previous_owners` array. This takes 1 string parameter for the new owner's name. New owners should be `pushed` to the end of the array.
+*  `Car.sell()`, We should able to sell a car to someone, which should update the `owner` and `previous_owners` array. This takes 1 string parameter for the new owner's name. The old `owner` should be `pushed` to the end of the `previous_owners` array. The new `owner` should be set to the parameter passed in.
 
 * `Car.paint()`, which should take a new color (string) and update the color of the car to the new color.
 
