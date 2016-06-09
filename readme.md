@@ -2,7 +2,9 @@
 
 The idea of this lab is to get you comfortable with Object Oriented Programming (OOP) and introduce you to Test Driven Development (TDD) in JavaScript. By the end you should be comfortable working with objects and writing prototypes.
 
-All of the tests have been written for you, so all you'll need to do is run them.
+All of the tests have been written for you, so all you'll need to do is run them. No need to create any Car objects, because the tests will do that for you.
+
+If any of the tests errors are unclear, take a look at what the test is running within `test/carTest.js`
 
 ## Getting Started
 
@@ -70,7 +72,7 @@ it should be optional and default to an empty array if not specified.
 
 Implement the following methods:
 
-* `Car.pickUp()` should take a `name` and `console.log` that you are `"driving to 'pick up <friend>'"`, but only if the `car` is running AND there are enough seats available. It should also update the `passengers` array to include the new passenger. It should also return true on success and false on failure. Newly picked up passengers should be `pushed` to the end of the array.
+* `Car.pickUp()` should take a `name` and `console.log` that you are `"driving to pick up <friend>"`, but only if the `car` is running AND there are enough seats available. It should also update the `passengers` array to include the new passenger. It should also return true on success and false on failure. Newly picked up passengers should be `pushed` to the end of the array.
 * `Car.dropOff()` it should take a `name` and remove them from the `passengers` array, but only if they are in the array. It should also only drop them off if the car is `on`. It should also output `"driving to drop off <friend>"` and return true on success and false on failure.
 * `Car.passengerCount()` should return the number (integer) of passengers currently in the car.
 
