@@ -1,7 +1,7 @@
 {
   "name": "oop-prototype-car",
   "scripts": {
-    "lint:js": "node_modules/eslint/bin/eslint.js src",
+    "lint:js": "node_modules/eslint/bin/eslint.js src --fix",
     "test": "node test/index.js"
   },
   "author": "",
