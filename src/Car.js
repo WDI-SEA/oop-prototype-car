@@ -5,8 +5,6 @@ function Car(make, model, year, color, seats, passengers) {
   this.color = color;
   this.seats = seats;
   this.passengers = passengers || [];
-  // TODO: add color, seats here
-
   this.running = false;
   this.owner = 'manufacturer';
   this.previousOwners = [];
@@ -63,8 +61,8 @@ Car.prototype.dropOff = function(name) {
       this.passengers.splice(i, 1);
       return true;
     }
-    return false;
   }
+  return false;
 };
 
 Car.prototype.passengerCount = function() {
