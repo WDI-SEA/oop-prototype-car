@@ -35,8 +35,8 @@ Car.prototype.driveTo = function(destination) {
   if (this.running) {
     console.log('driving to ' + destination);
     return true;
-  } 
-    return false;
+  }
+  return false;
 };
 
 Car.prototype.park = function() {
@@ -44,7 +44,7 @@ Car.prototype.park = function() {
     console.log('parked!!');
     return true;
   }
-    return false;
+  return false;
 };
 
 Car.prototype.pickUp = function(name) {
@@ -53,7 +53,7 @@ Car.prototype.pickUp = function(name) {
     this.passengers.push(name);
     return true;
   }
-    return false;
+  return false;
 };
 
 Car.prototype.dropOff = function(name) {
@@ -63,13 +63,12 @@ Car.prototype.dropOff = function(name) {
       this.passengers.splice(i, 1);
       return true;
     }
-      return false;
+    return false;
   }
 };
 
 Car.prototype.passengerCount = function() {
-  var integer = this.passengers.length;
-  return integer;
+  return this.passengers.length;
 };
 
 // export the Car function for use in node //
