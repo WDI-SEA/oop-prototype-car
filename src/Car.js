@@ -67,13 +67,12 @@ Car.prototype.dropOff = function(name) {
     }
     return false;
   }
+  return name;
 };
 
 Car.prototype.passengerCount = function() {
   return this.passengers.length;
 };
-
-Car('Lenny', 'Blue', 'Bellingham');
 
 // export the Car function for use in node //
 // this is required for the test.js to load this //
