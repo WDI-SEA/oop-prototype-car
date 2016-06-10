@@ -23,58 +23,54 @@ Car.prototype.paint = function(newColor) {
   return newColor;
 };
 
-Car.prototype.start = function(){
+Car.prototype.start = function() {
   this.running = true;
 };
 
-Car.prototype.off = function(){
+Car.prototype.off = function() {
   this.running = false;
 };
 
-Car.prototype.driveTo = function(destination){
-  if(this.running){
-    console.log("driving to " + destination);
+Car.prototype.driveTo = function(destination) {
+  if (this.running) {
+    console.log('driving to ' + destination);
     return true;
-  } else {
+  } 
     return false;
-  }
 };
 
-Car.prototype.park = function(){
-  if(!this.running){
-    console.log("parked!!");
+Car.prototype.park = function() {
+  if (!this.running) {
+    console.log('parked!!');
     return true;
-  } else {
-    return false;
   }
+    return false;
 };
 
-Car.prototype.pickUp = function(name){
-  if(this.running && this.passengers.length + 1 < this.seats){
-    console.log("driving to pick up " + name);
+Car.prototype.pickUp = function(name) {
+  if (this.running && this.passengers.length + 1 < this.seats) {
+    console.log('driving to pick up ' + name);
     this.passengers.push(name);
     return true;
-  } else {
+  }
     return false;
+};
+
+Car.prototype.dropOff = function(name) {
+  for (var i = 0; i < this.passengers.length; i++) {
+    if (this.running && this.passengers[i] === name) {
+      console.log('driving to drop off ' + name);
+      this.passengers.splice(i, 1);
+      return true;
+    }
+      return false;
   }
 };
 
-Car.prototype.dropOff = function(name){
-  for(var i = 0; i < this.passengers.length; i++){
-    if(this.running && this.passengers[i] === name){
-      console.log("driving to drop off " + name);
-      this.passengers.splice(i, 1);
-      return true;
-    } else {
-      return false;
-    }
-  } 
-};
-
-Car.prototype.passengerCount = function(){
+Car.prototype.passengerCount = function() {
   var integer = this.passengers.length;
   return integer;
-}
+};
 
 // export the Car function for use in node //
 // this is required for the test.js to load this //
