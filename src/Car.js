@@ -1,8 +1,15 @@
-function Car(make, model, year, color, seats) {
+function Car(make, model, year, color, seats, passengers) {
   this.make = make;
   this.model = model;
   this.year = year;
   // TODO: add color, seats here
+  this.color = color;
+  this.seats = seats;
+  if (passengers === undefined) {
+    this.passengers = [];
+  } else {
+    this.passengers = passengers;
+  }
 
   this.running = false;
   this.owner = 'manufacturer';
@@ -10,11 +17,66 @@ function Car(make, model, year, color, seats) {
 }
 
 Car.prototype.sell = function(newOwner) {
-  return newOwner;
+  this.previousOwners.push(this.owner);
+  this.owner = newOwner;
 };
 
 Car.prototype.paint = function(newColor) {
-  return newColor;
+  this.color = newColor;
+};
+
+Car.sell = 'Lenny';
+Car.paint = 'blue';
+
+Car.prototype.start = function() {
+  this.running = true;
+};
+
+Car.start = true;
+
+Car.prototype.off = function() {
+  this.running = false;
+};
+
+Car.off = false;
+
+Car.prototype.driveTo = function(destination) {
+  if (this.running === true) {
+    console.log('driving to' + destination);
+    return true;
+  }
+  return false;
+};
+
+Car.prototype.park = function() {
+  if (this.running === false) {
+    console.log('parked!');
+    return true;
+  }
+  return false;
+};
+
+Car.prototype.pickUp = function(name) {
+  if (this.running === true && (this.seats > (this.passengers.length + 1))) {
+    console.log("driving to 'pick up " + name + "'");
+    this.passengers.push(name);
+    return true;
+  }
+  return false;
+};
+
+Car.prototype.dropOff = function(name) {
+  for (var i = 0; i < this.passengers.length; i++) {
+    if (this.passengers[i] === name && this.running === true) {
+      this.passengers.splice(i, 1);
+      return true;
+    }
+  }
+  return false;
+};
+
+Car.prototype.passengerCount = function() {
+  return this.passengers.length;
 };
 
 // export the Car function for use in node //
