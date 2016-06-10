@@ -95,4 +95,4 @@ Car.prototype.passengerCount = function() {
 
 
 
-// Car('Lenny', 'Blue', false, 'Bellingham');
+
