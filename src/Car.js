@@ -59,7 +59,7 @@ Car.prototype.pickUp = function(name) {
 };
 
 Car.prototype.dropOff = function(name) {
-  if (this.running && this.passengers.includes(name)) {
+  if (this.running && this.passengers.indexOf(name) !== -1) {
     this.passengers.splice(name, 1);
     console.log('driving to drop off ' + name);
     return true;
