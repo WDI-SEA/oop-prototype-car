@@ -57,14 +57,19 @@ Car.prototype.pickUp = function(name) {
 	} else { return false;}
 };
 
-Car.prototype.pickUp = function(name) {
-	if (this.running && this.passengers.indexOf(name) != -1) {
-		this.passengers.slice
-		console.log("Driving to drop off "+name)
+Car.prototype.dropOff = function(name) {
+	var passenger = this.passengers.indexOf(name);
+	// if (this.running && passenger > -1) {
+		this.passengers.slice(passenger, 1);
+		console.log("Driving to drop off "+name);
 		return true;
-	} else{return false;}
+	// } else{return false;}
 };
 
+Car.prototype.passengerCount = function(name) {
+	var count = this.passengers.length;
+	console.log(count);
+};
 
 
 // export the Car function for use in node //
