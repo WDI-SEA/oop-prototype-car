@@ -59,11 +59,11 @@ Car.prototype.pickUp = function(name) {
 
 Car.prototype.dropOff = function(name) {
 	var passenger = this.passengers.indexOf(name);
-	// if (this.running && passenger > -1) {
+	if (this.running && passenger > -1) {
 		this.passengers.slice(passenger, 1);
 		console.log("Driving to drop off "+name);
 		return true;
-	// } else{return false;}
+	} else{return false;}
 };
 
 Car.prototype.passengerCount = function(name) {
