@@ -1,4 +1,4 @@
-function Car(make, model, year, color, seats) {
+function Car(make, model, year, color, seats, passengers) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -8,28 +8,30 @@ function Car(make, model, year, color, seats) {
   this.running = false;
   this.owner = 'manufacturer';
   this.previousOwners = [];
-  this.passengers = [];
+  this.passengers = [] || passengers;
 }
 
 Car.prototype.sell = function(newOwner) {
-  return newOwner;
+	this.previousOwners.push (this.owner);
+	this.owner = newOwner;
+  	//return newOwner;
 };
 
 Car.prototype.paint = function(newColor) {
-  return newColor;
+  	return newColor;
 };
 
 
 
-Car.start = function() {
-	Car.running = true;
+Car.prototype.start = function() {
+	this.running = true;
 };
 
-Car.off = function() {
-	Car.running = false;
+Car.prototype.off = function() {
+	this.running = false;
 };
 
-Car.driveTo = function(destination) {
+Car.prototype.driveTo = function(destination) {
 	if this.running ===true {
 		console.log("Driving to" + destination);
 		return true;
