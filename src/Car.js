@@ -12,13 +12,16 @@ function Car(make, model, year, color, seats, passengers) {
 }
 
 Car.prototype.sell = function(newOwner) {
-	this.previousOwners.push (this.owner);
+	this.previousOwners.push(this.owner);
 	this.owner = newOwner;
   	//return newOwner;
 };
 
 Car.prototype.paint = function(newColor) {
-  	return newColor;
+  	if(typeof(newColor) === 'string') {
+  		this.color = newColor;
+  	}
+  	//return newColor;
 };
 
 
@@ -32,7 +35,7 @@ Car.prototype.off = function() {
 };
 
 Car.prototype.driveTo = function(destination) {
-	if this.running ===true {
+	if (this.running) {
 		console.log("Driving to" + destination);
 		return true;
 	}
@@ -41,8 +44,8 @@ Car.prototype.driveTo = function(destination) {
 	}
 }
 
-Car.park = function() {
-	if this.running ===false {
+Car.prototype.park = function() {
+	if ((this.running) == false) {
 		console.log("parked!!")
 		return true;
 	}
@@ -50,6 +53,30 @@ Car.park = function() {
 		return false;
 	}
 }
+
+
+Car.prototype.pickup = function(name) {
+	if (this.running && this.passengers.length +1 < this.seats) {
+	this.passengers.push(name);
+	console.log("driving to pick up " + name);
+	}
+}
+
+
+Car.prototype.dropOff = function(name) {
+	var passenger = this.passengers.indexOf(name);
+	if ((this.running == true) && (passenger > -1))
+		this.passengers.splice(passenger, 1);
+		return true;
+	}
+	return false;
+}
+
+
+Car.prototype.passengerCount = function() {
+	return this.passengers.length;
+}
+
 
 // export the Car function for use in node //
 // this is required for the test.js to load this //
