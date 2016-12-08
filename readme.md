@@ -13,16 +13,6 @@ If any of the tests errors are unclear, take a look at what the test is running 
 * `npm test` - run test suite
 * `npm run lint:js` - lint JS
 
-## Submission
-
-To submit, create a pull request as before. Additionally, your submission will be checked automatically using a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) service called Travis CI. Travis CI will do the following to check your code:
-
-* Run `npm install` on Travis's servers
-* Run `npm run lint:js` to check your code styling
-* Run `npm test` to check if your tests pass
-
-Make sure to **run these commands locally first** to verify your correctness. You can see the progress of the Travis CI check by going to your pull request, or looking at the [Travis CI build page for this repo](https://travis-ci.org/WDI-SEA/oop-prototype-car/pull_requests)
-
 ##Requirements
 
 We need a prototype for a car. Can you help us with your sweet JavaScript skills?
@@ -48,7 +38,7 @@ Your `Car` should meet the following requirements:
   * `Car.sell(newOwner)`
     * We should able to sell a car to someone, which should update the `owner` and `previousOwners` array.
     * This takes 1 string parameter for the new owner's name.
-    * The old owner should be pushed to the end of the `previousOwners` array. 
+    * The old owner should be pushed to the end of the `previousOwners` array.
     * The new `owner` should be set to the parameter passed in.
   * `Car.paint(newColor)`
     * We should be able to paint the car a new color
