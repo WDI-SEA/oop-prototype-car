@@ -18,7 +18,9 @@ If any of the tests errors are unclear, take a look at what the test is running 
 
 We need a prototype for a car. Can you help us with your sweet JavaScript skills?
 
-But don't worry we'll go step by step
+<img align="center" src="http://s2.quickmeme.com/img/e9/e9b82533f50538f4d36656f24bf2afb39642223033cd19d52ef1eea5b03ab1bf.jpg" alt="Listen to the green old man" />
+
+But don't worry we'll go step by step.
 
 ### Phase I
 
