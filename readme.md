@@ -9,17 +9,39 @@ If any of the tests errors are unclear, take a look at what the test is running 
 ## Getting Started
 
 * Fork and clone this repository
-* Run `npm install` to install dependencies
-* `npm test` - run test suite
-* `npm run lint:js` - lint JS
+* Run `yarn install` to install dependencies
+* `yarn start` - run `main.js`
+* `yarn test` - run test suite
+* `yarn run lint:js` - lint JS
 
-##Requirements
+## Requirements
 
 We need a prototype for a car. Can you help us with your sweet JavaScript skills?
 
+But don't worry we'll go step by step
+
 ### Phase I
 
-Your `Car` should meet the following requirements:
+Under the given file `carFn.js`, fulfil the requirements below
+
+* Create an object of `Car` that has the following properties:
+  * `make`
+  * `model`
+  * `year`
+  * `color`
+  * `seats`
+  * `previousOwners`
+    * should be initialized to an empty array, `[]`.
+  * `owner`
+    * should be initialized to `manufacturer`.
+  * `running`
+    * should be initialized to `false`.
+* Object `Car` must also has these following functions
+  * `sell(newOwner)`
+    * We should able to sell a car to someone, which should update the `owner` and `previousOwners` array.
+    * This takes 1 string parameter for the new owner's name.
+    * The old owner should be pushed to the end of the `previousOwners` array.
+    * The new `owner` should be set to the parameter passed in.
 
 * Must have the following constructor parameters:
   * `make`

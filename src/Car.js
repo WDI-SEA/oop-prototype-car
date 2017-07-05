@@ -1,3 +1,5 @@
+// Phase II here, don't require this file until you're done with Phase I
+
 function Car(make, model, year, color, seats) {
   this.make = make;
   this.model = model;
