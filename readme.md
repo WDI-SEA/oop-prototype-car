@@ -36,12 +36,18 @@ Under the given file `carFn.js`, fulfil the requirements below
     * should be initialized to `manufacturer`.
   * `running`
     * should be initialized to `false`.
-* Object `Car` must also has these following functions
+* Object `Car` must also has these following functions as properties
   * `sell(newOwner)`
     * We should able to sell a car to someone, which should update the `owner` and `previousOwners` array.
     * This takes 1 string parameter for the new owner's name.
     * The old owner should be pushed to the end of the `previousOwners` array.
     * The new `owner` should be set to the parameter passed in.
+  * `paint(newColor)`
+    * We should be able to paint the car a new color
+    * This takes 1 string parameter for the new color's name
+    * This should update the color of the car to the new color.
+
+### Phase II
 
 * Must have the following constructor parameters:
   * `make`
@@ -67,7 +73,7 @@ Under the given file `carFn.js`, fulfil the requirements below
     * This takes 1 string parameter for the new color's name
     * This should update the color of the car to the new color.
 
-### Phase II
+### Phase III
 
 Implement and test the following methods:
 
@@ -83,7 +89,7 @@ Implement and test the following methods:
   * Should return true if it is successful and false if it is not.
 
 
-### Phase III
+### Phase IV
 
 Add the following property as a parameter to the **constructor**:
 
