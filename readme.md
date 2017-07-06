@@ -51,6 +51,40 @@ Under the given file `carFn.js`, fulfil the requirements below
 
 ### Phase II
 
+Create a test to check whether you've passed the previous requirements.
+Implement and test the following methods:
+
+_feel free to test beyond the suggestions below_
+
+Normal cases:
+* `var c1 = new Car('Honda', 'Vuzel', 2017, 'red', 7)`
+  * Should expect all properties are set as per initial state
+    * e.g. `c1.make` === 'Honda', etc
+  * Should expect `c1.owner` === 'manufacturer'
+  * Should expect `c1.running` === false
+
+* `c1.sell('prima')`
+  * Should expect `c1.owner` to 'prima'
+  * Should expect `c1.previousOwners` to ['manufacturer']
+
+* `c1.paint('blue')`
+  * Should expect `c1.color` to 'blue'
+
+Abnormal cases:
+
+
+* `Car.start()`
+  * Should change the running value of the car to `true`.
+* `Car.off()`
+  * Should change the running value to `false`.
+* `Car.driveTo(destination)`
+  * Should `console.log` `"driving to <destination>"`, but only if the car is running.
+  * Should return true if it is successful and false if it is not.
+* `Car.park()`
+  * Only if the car is not running, you should console.log `parked!!`.
+  * Should return true if it is successful and false if it is not.
+
+
 * Must have the following constructor parameters:
   * `make`
   * `model`
