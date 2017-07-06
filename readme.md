@@ -71,7 +71,16 @@ Normal cases:
   * Should expect `c1.color` to 'blue'
 
 Abnormal cases:
+* `var c2 = new Car()`
+  * Should return === "car can't be instantiated, required parameters are not given"
 
+* `c1.sell(0)`
+  * Should return === 'car can only be sold to a real person with name, please input a string'
+
+* `c1.paint(false)`
+  * Should return === 'car can only be painted with real color, please input a string'
+
+### Phase III
 
 * `Car.start()`
   * Should change the running value of the car to `true`.
