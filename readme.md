@@ -51,6 +51,11 @@ Under the given file `carFn.js`, fulfil the requirements below
 
 ### Phase II
 
+Under the given file `Car.js`, convert the previous implementation of object
+into `Class` literal notation.
+
+### Phase III
+
 Create a test to check whether you've passed the previous requirements.
 Implement and test the following methods:
 
@@ -80,7 +85,7 @@ Abnormal cases:
 * `c1.paint(false)`
   * Should return === 'car can only be painted with real color, please input a string'
 
-### Phase III
+### Phase IV
 
 * `Car.start()`
   * Should change the running value of the car to `true`.
