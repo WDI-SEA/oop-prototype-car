@@ -1,22 +1,19 @@
-function Car(make, model, year, color, seats) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
-  // TODO: add color, seats here
+// Phase II here, don't require this file until you're done with Phase I
 
-  this.running = false;
-  this.owner = 'manufacturer';
-  this.previousOwners = [];
+class Car {
+  constructor(make, model, year, color, seats) {
+    this.make = make
+    this.model = model
+    this.year = year
+    // TODO: add color, seats here
+  }
+
+  // add the sell function
+
+  // add the paint function
+
+
 }
 
-Car.prototype.sell = function(newOwner) {
-  return newOwner;
-};
-
-Car.prototype.paint = function(newColor) {
-  return newColor;
-};
-
-// export the Car function for use in node //
-// this is required for the test.js to load this //
-module.exports = Car;
+// export the Car class //
+// this is required for the carTest.js to load this //
