@@ -24,7 +24,8 @@ But don't worry we'll go step by step.
 
 ### Phase I
 
-Under the given file `carFn.js`, fulfil the requirements below
+Under the given file `carFn.js`, run all the functions of a `Car` object on `main.js`.
+The requirements to satisfy are listed below:
 
 * Create an object of `Car` that has the following properties:
   * `make`
@@ -49,15 +50,18 @@ Under the given file `carFn.js`, fulfil the requirements below
     * This takes 1 string parameter for the new color's name
     * This should update the color of the car to the new color.
 
+
 ### Phase II
 
 Under the given file `Car.js`, convert the previous implementation of object
-into `Class` literal notation.
+into `Class` literal notation. Nothing else should be added to the `class`
+implementation at this point.
+
+Make sure to update the `main.js` file accordingly.
 
 ### Phase III
 
-Create a test to check whether you've passed the previous requirements.
-Implement and test the following methods:
+Create a test to check whether you've passed the previous requirements. Implement and test the following methods:
 
 _feel free to test beyond the suggestions below_
 
@@ -85,7 +89,12 @@ Abnormal cases:
 * `c1.paint(false)`
   * Should return === 'car can only be painted with real color, please input a string'
 
+**Run all the tests by running `yarn test`**
+
 ### Phase IV
+
+Continue to write more tests, try to create the assertion first at `carTest.js`
+before writing the implementation code on `Car.js`
 
 * `Car.start()`
   * Should change the running value of the car to `true`.
@@ -123,7 +132,7 @@ Abnormal cases:
     * This takes 1 string parameter for the new color's name
     * This should update the color of the car to the new color.
 
-### Phase III
+### Phase V
 
 Implement and test the following methods:
 
@@ -132,14 +141,14 @@ Implement and test the following methods:
 * `Car.off()`
   * Should change the running value to `false`.
 * `Car.driveTo(destination)`
-  * Should `console.log` `"driving to <destination>"`, but only if the car is running.
+  * Should `console.log` `"driving to <destination>"`, but **only if the car is running**.
   * Should return true if it is successful and false if it is not.
 * `Car.park()`
   * Only if the car is not running, you should console.log `parked!!`.
   * Should return true if it is successful and false if it is not.
 
 
-### Phase IV
+### Phase VI
 
 Add the following property as a parameter to the **constructor**:
 
