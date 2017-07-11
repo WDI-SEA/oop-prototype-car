@@ -12,7 +12,6 @@ If any of the tests errors are unclear, take a look at what the test is running 
 * Run `yarn install` to install dependencies
 * `yarn start` - run `main.js`
 * `yarn test` - run test suite
-* `yarn run lint:js` - lint JS
 
 ## Requirements
 
@@ -108,22 +107,6 @@ before writing the implementation code on `Car.js`
   * Should return true if it is successful and false if it is not.
 
 ### Phase V
-
-Implement and test the following methods:
-
-* `Car.start()`
-  * Should change the running value of the car to `true`.
-* `Car.off()`
-  * Should change the running value to `false`.
-* `Car.driveTo(destination)`
-  * Should `console.log` `"driving to <destination>"`, but **only if the car is running**.
-  * Should return true if it is successful and false if it is not.
-* `Car.park()`
-  * Only if the car is not running, you should console.log `parked!!`.
-  * Should return true if it is successful and false if it is not.
-
-
-### Phase VI
 
 Add the following property as a parameter to the **constructor**:
 
