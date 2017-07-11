@@ -107,31 +107,6 @@ before writing the implementation code on `Car.js`
   * Only if the car is not running, you should console.log `parked!!`.
   * Should return true if it is successful and false if it is not.
 
-
-* Must have the following constructor parameters:
-  * `make`
-  * `model`
-  * `year`
-  * `color`
-  * `seats`
-* By default, a new `Car` should have the following values **initialized** in the constructor:
-  * `previousOwners`
-    * should be initialized to an empty array, `[]`.
-  * `owner`
-    * should be initialized to `manufacturer`.
-  * `running`
-    * should be initialized to `false`.
-* We should be able to do the following with our car:
-  * `Car.sell(newOwner)`
-    * We should able to sell a car to someone, which should update the `owner` and `previousOwners` array.
-    * This takes 1 string parameter for the new owner's name.
-    * The old owner should be pushed to the end of the `previousOwners` array.
-    * The new `owner` should be set to the parameter passed in.
-  * `Car.paint(newColor)`
-    * We should be able to paint the car a new color
-    * This takes 1 string parameter for the new color's name
-    * This should update the color of the car to the new color.
-
 ### Phase V
 
 Implement and test the following methods:
