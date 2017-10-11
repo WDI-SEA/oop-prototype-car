@@ -2,9 +2,10 @@
   "name": "oop-prototype-car",
   "scripts": {
     "lint:js": "node_modules/eslint/bin/eslint.js src --fix",
-    "test": "node test/index.js"
+    "test": "node test/index.js",
+    "start": "node src/main.js"
   },
-  "author": "",
+  "author": "Jeremiah Alexander & Prima Aulia Gusta",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^6.0.4",

@@ -9,55 +9,91 @@ If any of the tests errors are unclear, take a look at what the test is running 
 ## Getting Started
 
 * Fork and clone this repository
-* Run `npm install` to install dependencies
-* `npm test` - run test suite
-* `npm run lint:js` - lint JS
+* Run `yarn install` to install dependencies
+* `yarn start` - run `main.js`
+* `yarn test` - run test suite
 
-## Submission
-
-To submit, create a pull request as before. Additionally, your submission will be checked automatically using a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) service called Travis CI. Travis CI will do the following to check your code:
-
-* Run `npm install` on Travis's servers
-* Run `npm run lint:js` to check your code styling
-* Run `npm test` to check if your tests pass
-
-Make sure to **run these commands locally first** to verify your correctness. You can see the progress of the Travis CI check by going to your pull request, or looking at the [Travis CI build page for this repo](https://travis-ci.org/WDI-SEA/oop-prototype-car/pull_requests)
-
-##Requirements
+## Requirements
 
 We need a prototype for a car. Can you help us with your sweet JavaScript skills?
 
+<img align="center" src="http://s2.quickmeme.com/img/e9/e9b82533f50538f4d36656f24bf2afb39642223033cd19d52ef1eea5b03ab1bf.jpg" alt="Listen to the green old man" />
+
+But don't worry we'll go step by step.
+
 ### Phase I
 
-Your `Car` should meet the following requirements:
+Under the given file `carFn.js`, run all the functions of a `Car` object on `main.js`.
+The requirements to satisfy are listed below:
 
-* Must have the following constructor parameters:
+* Create an object of `Car` that has the following properties:
   * `make`
   * `model`
   * `year`
   * `color`
   * `seats`
-* By default, a new `Car` should have the following values **initialized** in the constructor:
   * `previousOwners`
     * should be initialized to an empty array, `[]`.
   * `owner`
     * should be initialized to `manufacturer`.
   * `running`
     * should be initialized to `false`.
-* We should be able to do the following with our car:
-  * `Car.sell(newOwner)`
+* Object `Car` must also has these following functions as properties
+  * `sell(newOwner)`
     * We should able to sell a car to someone, which should update the `owner` and `previousOwners` array.
     * This takes 1 string parameter for the new owner's name.
-    * The old owner should be pushed to the end of the `previousOwners` array. 
+    * The old owner should be pushed to the end of the `previousOwners` array.
     * The new `owner` should be set to the parameter passed in.
-  * `Car.paint(newColor)`
+  * `paint(newColor)`
     * We should be able to paint the car a new color
     * This takes 1 string parameter for the new color's name
     * This should update the color of the car to the new color.
 
+
 ### Phase II
 
-Implement and test the following methods:
+Under the given file `Car.js`, convert the previous implementation of object
+into `Class` literal notation. Nothing else should be added to the `class`
+implementation at this point.
+
+Make sure to update the `main.js` file accordingly.
+
+### Phase III
+
+Create a test to check whether you've passed the previous requirements. Implement and test the following methods:
+
+_feel free to test beyond the suggestions below_
+
+Normal cases:
+* `var c1 = new Car('Honda', 'Vuzel', 2017, 'red', 7)`
+  * Should expect all properties are set as per initial state
+    * e.g. `c1.make` === 'Honda', etc
+  * Should expect `c1.owner` === 'manufacturer'
+  * Should expect `c1.running` === false
+
+* `c1.sell('prima')`
+  * Should expect `c1.owner` to 'prima'
+  * Should expect `c1.previousOwners` to ['manufacturer']
+
+* `c1.paint('blue')`
+  * Should expect `c1.color` to 'blue'
+
+Abnormal cases:
+* `var c2 = new Car()`
+  * Should return === "car can't be instantiated, required parameters are not given"
+
+* `c1.sell(0)`
+  * Should return === 'car can only be sold to a real person with name, please input a string'
+
+* `c1.paint(false)`
+  * Should return === 'car can only be painted with real color, please input a string'
+
+**Run all the tests by running `yarn test`**
+
+### Phase IV
+
+Continue to write more tests, try to create the assertion first at `carTest.js`
+before writing the implementation code on `Car.js`
 
 * `Car.start()`
   * Should change the running value of the car to `true`.
@@ -70,8 +106,7 @@ Implement and test the following methods:
   * Only if the car is not running, you should console.log `parked!!`.
   * Should return true if it is successful and false if it is not.
 
-
-### Phase III
+### Phase V
 
 Add the following property as a parameter to the **constructor**:
 
